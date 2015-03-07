@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Applying isotope for items bound with knockout js | Sample</title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/knockout-2.3.0.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<h2>Applying isotope for items bound with knockout js</h2>
+<h3>DEMO</h3>
+
+    <div id="filters">
+        <a href="javascript: void(0);" data-filter="*">all</a> | 
+        <a href="javascript: void(0);" data-filter=".red">red</a> | 
+        <a href="javascript: void(0);" data-filter=".cyan">cyan</a> | 
+        <a href="javascript: void(0);" data-filter=".green">green</a> | 
+    </div>
+
+    <div id="container" data-bind="foreach: items">
+        <div class="item" data-bind="style: { backgroundColor: color }, css: color, isotope: {container: '#container', itemSelector: '.item'}"></div>
+    </div>
+
+    <div id="commands">
+        <a href="javascript: void(0);" data="red">add red</a> | 
+        <a href="javascript: void(0);" data="cyan">add cyan</a> | 
+        <a href="javascript: void(0);" data="green">add green</a> | 
+    </div>
+</body>
+    <script type="text/javascript" src="js/script.js"></script>
+</html>
